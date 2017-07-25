@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成绩单打印</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="inputInfo.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function () {
+            document.getElementById('inputs').addEventListener('submit',function (event) {
+                event.preventDefault();
+                InfoCheck(document.getElementById('inputs'));
+            })
+            
+        })
+    </script>
+</head>
+<body>
+<br><br>
+<div class="container">
+    <table class="table table-striped" id="grades">
+        <caption>成绩单</caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>民族</th>
+            <th>班级</th>
+            <th>数学成绩</th>
+            <th>语文成绩</th>
+            <th>英语成绩</th>
+            <th>编程成绩</th>
+            <th>平均分</th>
+            <th>总分</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Tom</td>
+            <td>U01</td>
+            <td>汉族</td>
+            <td>1601</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
+            <td>60</td>
+            <td>75</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Dove</td>
+            <td>U03</td>
+            <td>汉族</td>
+            <td>1604</td>
+            <td>95</td>
+            <td>85</td>
+            <td>85</td>
+            <td>95</td>
+            <td>90</td>
+            <td>360</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>U02</td>
+            <td>藏族</td>
+            <td>1602</td>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>90</td>
+            <td>90</td>
+            <td>360</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form name="inputInfo" id="inputs" action="printReport.html" >
+        <fieldset>
+            <h4>添加学生</h4>
+            姓名：    <input type="text" name="name"><br>
+            学号：    <input type="text" name="studyNumber"><br>
+            民族：    <input type="text" name="nation"><br>
+            班级：    <input type="text" name="class"><br>
+            数学成绩： <input type="text" name="mathGrade"><br>
+            语文成绩： <input type="text" name="chineseGrade"><br>
+            英语成绩： <input type="text" name="englishGrade"><br>
+            编程成绩： <input type="text" name="programGrade"><br>
+            <input type="submit" value="提交">
+        </fieldset>
+    </form>
+
+</div>
+</body>
+</html>
